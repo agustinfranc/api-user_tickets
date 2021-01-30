@@ -19,4 +19,12 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    /**
+     * Get the tickets for the user.
+     */
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 }

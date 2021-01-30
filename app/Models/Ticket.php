@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Ticket extends Model
 {
     use HasFactory;
+
+    /**
+     * Get the user that owns the ticket.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
