@@ -16,4 +16,15 @@ class Ticket extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * Scope a query to only include active tickets.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeActive($query)
+    {
+        return $query->whereActive(1);
+    }
 }
