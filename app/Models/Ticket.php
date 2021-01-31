@@ -10,6 +10,15 @@ class Ticket extends Model
     use HasFactory;
 
     /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'active' => 'boolean',
+    ];
+
+    /**
      * Get the user that owns the ticket.
      */
     public function user()
