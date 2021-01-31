@@ -25,6 +25,6 @@ class TicketController extends Controller
             ->whereCode($code)
             ->firstOrFail();
 
-        return $ticket->active;
+        return response()->json($ticket->active);
     }
 }

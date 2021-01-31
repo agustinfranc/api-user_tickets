@@ -45,7 +45,7 @@ GET | localhost:8000/api/tickets/search/active?code=JOJSE023
 Response Data
 
 ```json
-0
+false
 ```
 
 ***
