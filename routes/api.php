@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/tickets/search/active', [TicketController::class, 'searchAndGetStatus'])->name('tickets.searchAndGetStatus');
+// Another approach may be 'ticket/active'
 
 Route::get('/users/search/tickets', [UserController::class, 'searchAndGetActiveTickets'])->name('users.searchAndGetActiveTickets');
+// Another approach may be 'user/tickets'
